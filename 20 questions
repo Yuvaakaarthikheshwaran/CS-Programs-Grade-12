@@ -1,0 +1,164 @@
+
+COMPUTER SCIENCE PRACTICALS 2026-27
+
+PROGRAM 1
+#Program for Arithmetic Calculator
+result = 0
+while True:
+    val1 = float(input("Enter the first value :"))
+    val2 = float(input("Enter the second value :"))
+    op = input("Enter any one of the operator (+,-,*,/,//,%)")
+    if op == "+":
+        result = val1 + val2
+    elif op == "-":
+        result = val1 - val2
+    elif op == "*":
+        result = val1 * val2
+    elif op == "/":
+        if val2 == 0:
+            print("Please enter a value other than 0")
+        else:
+            result = val1 / val2
+    elif op == "//":
+        result = val1 // val2
+    else:
+        result = val1 % val2
+    print("The result is :",result)
+    x=input("do you want to continue ")
+    if x=='n':
+        break
+
+PROGRAM 2
+n =int(input("Enter the limit:"))
+x = -1
+y = 1
+z = 0
+i=0
+print("Fibonacci series :\n")
+while(i<n):
+    print(z, end=" ")
+    x = y
+    y = z
+    z = x + y
+    i=i+1
+
+PROGRAM 3
+while True:
+    print('1.Area of triangle')
+    print('2.Area of Circle')
+    print('3.Area of Rectangle')
+    choice=int(input('Enter the choice'))
+    if(choice==1):
+        b=int(input('Enter the base'))
+        h=int(input('Enter the height'))
+        Area=0.5*b*h
+        print('Area of triangle is', Area)
+    elif(choice==2):
+        r=int(input('Enter the radius'))
+        Area=3.14*r*r
+        print('the area of the circle is', Area)
+    elif(choice==3):
+        l=int(input('enter the length'))
+        b=int(input('enter the breadth'))
+        Area=l*b
+        print('The Area of the Rectangle is ', Area)
+    else:
+        print('Wrong input')
+    c=input('Do you want to continue?')
+    if c=='n':
+        break
+
+PROGRAM 4
+while True:
+    print("1.Factorial")
+    print("2.Sum of Elements in the list")
+    ch=int(input("Enter your choice"))
+    if ch==1:
+        n=int(input("Enter the number of terms to find the factorial"))
+        f=1
+        for i in range(1,n+1):
+            f=f*i
+        print("Factorial of given number is ", f)
+    elif ch==2:
+        n=eval(input("Enter the list"))
+        s=0
+        for i in n:
+            s=s+i
+        print("The sum of series",s)
+    con=input("Do you want to continue")
+    if con=='n':
+        break
+
+PROGRAM 5
+no=int(input("Enter any number to check : "))
+no1=no
+sum=0
+while(no>0):
+    ans=no%10
+    sum=sum+(ans*ans*ans)
+    no=int(no/10)
+if sum==no1:
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
+
+PROGRAM 6
+a=input("Enter the String")
+b=""
+l=len(a)
+for i in range(l-1,-1,-1):
+    b+=a[i]
+if a==b:
+    print("Given string is palindrome")
+else:
+    print("The given string is not palindrome")
+
+PROGRAM 7
+st=input("Enter the string")
+up=0
+lc=0
+Chr=0
+for i in range(len(st)):
+    Chr=Chr+1
+    if st[i].isupper()==True:
+        up=up+1
+    elif st[i].islower()==True:
+        lc=lc+1
+print("Number of upper case letter",up)
+print("Number of lower case letter",lc)
+print("Number of character ",Chr)
+
+PROGRAM 8
+a=eval(input("Enter a List"))
+odd=[]
+even=[]
+for i in a:
+    if i%2==0:
+        even.append(i)
+    else:
+        odd.append(i)
+if even==[]:
+    print("No even number")
+else:
+    print("The largest even number is",max(even))
+if odd==[]:
+    print("No odd number")
+else:
+    print("The largest odd number is ",max(odd))
+
+PROGRAM 9
+l=eval(input("Enter the list elements"))
+s=eval(input("Enter the element to be searched"))
+b=0
+for i in range(len(l)):
+    if l[i]==s:
+        print("The element found in the index",i,"position",i+1)
+        b=1
+if b==0:
+    print("element not found")
+
+PROGRAMS 10-20 INCLUDED FROM PRACTICAL FILE.
+(Programs 10-15: Text Files, Pickle, CSV, Stack)
+(Programs 16-19: Python MySQL Connectivity)
+(Program 20: SQL Commands and Queries)
+
